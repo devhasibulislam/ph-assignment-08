@@ -4,6 +4,7 @@ import './Cars.css';
 
 const Cars = () => {
     const [cars, setCars] = useState([]);
+    const [carInfo, setCarInfo] = useState([]);
 
     // calling api
     useEffect(() => {
@@ -11,6 +12,12 @@ const Cars = () => {
             .then(request => request.json())
             .then(response => setCars(response))
     }, []);
+
+    // function for handle button event
+    const handleAddingIntoCart = car => {
+        console.log(car);
+        setCarInfo(car);
+    };
 
     // return segment from HTML to react conversion
     return (
@@ -20,11 +27,15 @@ const Cars = () => {
                     cars.map(car => <Car
                         key={car.id}
                         car={car}
+                        handleAddingIntoCart={handleAddingIntoCart}
                     ></Car>)
                 }
             </div>
             <div className="side-bar">
-                <h4>This is sidebar</h4>
+                <div className='select-scheme'>
+                    <img src={carInfo.img_url} alt="" />
+                    <p>{carInfo.name}</p>
+                </div>
             </div>
         </div>
     );

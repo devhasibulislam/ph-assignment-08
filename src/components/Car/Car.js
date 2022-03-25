@@ -3,7 +3,7 @@ import './Car.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartPlus } from '@fortawesome/free-solid-svg-icons';
 
-const Car = ({ car }) => {
+const Car = ({ car, handleAddingIntoCart }) => {
     const { horsepower, img_url, make, name, price, year } = car;
     return (
         <div className='grid-item'>
@@ -18,7 +18,7 @@ const Car = ({ car }) => {
                 </div>
             </div>
             <hr />
-            <button className='add-cart'>Add to cart <FontAwesomeIcon icon={faCartPlus} /></button>
+            <button className='add-cart' onClick={() => handleAddingIntoCart(car)}>Add to cart <FontAwesomeIcon icon={faCartPlus} /></button>
         </div>
     );
 };
