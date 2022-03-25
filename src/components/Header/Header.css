@@ -8,8 +8,6 @@
     align-items: center;
 }
 
-.header-left-items {}
-
 .header-left-items h2 {
     font-family: cursive;
     font-size: 2rem;
@@ -22,7 +20,8 @@
 
 .header-right-items a {
     padding: 1rem 1.2rem;
-    border-radius: 50%;
+    border-radius: 10px;
     background-color: #16a085;
     color: white;
+    font-size: 20px;
 }

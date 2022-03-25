@@ -1,0 +1,39 @@
+.grid-item {
+    background-color: #bdc3c7;
+    padding: 1rem;
+    border-radius: .5rem;
+}
+
+.car-info {
+    display: flex;
+    flex-direction: row;
+}
+
+.car-info img {
+    margin-right: 1rem;
+    max-width: 50%;
+    object-fit: cover;
+    border-radius: .5rem;
+}
+
+.car-desc {
+    max-width: 50%;
+}
+
+.car-desc h3 {
+    margin-top: 0;
+}
+
+.car-desc p {
+    margin-bottom: 0;
+}
+
+.add-cart {
+    width: 100%;
+    padding: .5rem 0;
+    margin-top: 1rem;
+    border-radius: .5rem;
+    border: none;
+    background-color: #2c3e50;
+    color: white;
+}
