@@ -1,0 +1,28 @@
+.header-container {
+    background-color: #ecf0f1;
+    padding: 1rem;
+}
+
+.header-items {
+    display: flex;
+    align-items: center;
+}
+
+.header-left-items {}
+
+.header-left-items h2 {
+    font-family: cursive;
+    font-size: 2rem;
+    margin: 0;
+}
+
+.header-right-items {
+    margin-left: auto;
+}
+
+.header-right-items a {
+    padding: 1rem 1.2rem;
+    border-radius: 50%;
+    background-color: #16a085;
+    color: white;
+}
