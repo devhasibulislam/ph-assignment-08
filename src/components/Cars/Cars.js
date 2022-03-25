@@ -21,7 +21,6 @@ const Cars = () => {
                         key={car.id}
                         car={car}
                     ></Car>)
-                    // cars.map(car => console.log(car))
                 }
             </div>
             <div className="side-bar">
