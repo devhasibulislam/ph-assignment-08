@@ -7,15 +7,22 @@
 }
 
 .qna {
-    padding: 1rem;
+    padding: 2rem;
     box-sizing: border-box;
     background-color: #d3dae4;
     border-radius: 1rem;
+    box-shadow: 5px 5px 5px 0px rgba(40, 44, 51, .5);
 }
 
 .qna p {
     text-align: justify;
     color: gray;
+    line-height: 1.5rem;
+}
+
+.qna p::first-letter {
+    font-size: 30px;
+    color: cadetblue;
 }
 
 /* iPhone SE */

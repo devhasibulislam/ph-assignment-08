@@ -8,7 +8,7 @@ const Header = () => {
         <div className='header-container'>
             <div className="header-items">
                 <div className="header-left-items">
-                    <h2>Ambroxol Hydrochloride BP</h2>
+                    <h2>Ambroxol Hydrochloride BP Cars</h2>
                 </div>
                 <div className="header-right-items">
                     <a href="https://www.facebook.com/programmingherowebcourse" title='user'><FontAwesomeIcon icon={faUser} /></a>

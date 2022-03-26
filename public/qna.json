@@ -1,0 +1,17 @@
+[
+    {
+        "id": 1,
+        "question": "How React Works?",
+        "answer": "React is a declarative, efficient, and flexible JavaScript library for building user interfaces. It lets us compose small and isolated code which known as components. Such as: Header, Content and Footer we write in coded form of JavaScript which let in VirtualDOM and from that deep dive it change to UI which accessed with HTML code format. Which a user can see as UI. When we update data in a particular from where existing data loaded React JS compare the new data with previous data then update the new data with the previous one which appear in UI in behind the scene it appear with HTML coded form."
+    },
+    {
+        "id": 2,
+        "question": "Props VS State",
+        "answer": "Using props to pass data & event handlers down to my child components. Props are immutable which lets React do fast reference checks. Props are used to pass data down from my view-controller which simply indicate top level component. Props have better performance by using this we can pass data to child components. On the other hand, using state to store the data my current page needs in my controller-view. State should be managed in our view point which also means top level component. State is mutable. State has worse performance. State should not be accessed from child components which pass it with props."
+    },
+    {
+        "id": 3,
+        "question": "How useState() Works?",
+        "answer": "The useState() is a Hook that allows us to have state variables in functional components. We pass the initial state to this function and it returns a variable with the current state value and approach another function to update this value. It's hard to reuse stateful logic between components but useState() can make it easy through React JS. It also let us changing our component hierarchy. Even this hooks let you split one component into smaller functions based on what pieces are related."
+    }
+]
