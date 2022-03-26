@@ -1,0 +1,12 @@
+.sidebar-desc {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    justify-content: space-between;
+}
+
+.trash {
+    background-color: #c0392b;
+    padding: .5rem .6rem;
+    border-radius: 50%;
+}

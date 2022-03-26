@@ -4,13 +4,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartPlus } from '@fortawesome/free-solid-svg-icons';
 
 const Car = ({ car, handleAddingIntoCart }) => {
-    const { horsepower, img_url, make, name, price, year } = car;
+    const { horsepower, img_url, make, name, price, year, model } = car;
     return (
         <div className='grid-item'>
             <div className='car-info'>
                 <img src={img_url} alt="car_images" />
                 <div className="car-desc">
                     <h3><b>Name:</b> {name}</h3>
+                    <p><b>Model: </b>{model}</p>
                     <p><b>Make:</b> {make}</p>
                     <p><b>Horsepower:</b> {horsepower}</p>
                     <p><b>Price:</b> ${price}</p>
