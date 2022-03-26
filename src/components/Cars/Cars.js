@@ -2,6 +2,9 @@ import React, { useEffect, useState } from 'react';
 import Car from '../Car/Car';
 import Sidebar from '../Sidebar/Sidebar';
 import './Cars.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTableTennis, faGauge } from '@fortawesome/free-solid-svg-icons';
+import { type } from '@testing-library/user-event/dist/type';
 
 const Cars = () => {
     const [cars, setCars] = useState([]);
@@ -41,6 +44,31 @@ const Cars = () => {
         setCarInfo(deletedCar);
     }
 
+    // clear stack
+    const clearStack = car => {
+        console.log(car);
+        setCarInfo([]);
+    }
+
+    // generate random number
+    const randomNumber = number => {
+        const num = Math.round(Math.random() * (number - 1));
+        // console.log(typeof num);
+        if (num === undefined) {
+            randomNumber(number);
+        } else {
+            return num;
+        }
+    }
+
+    // choose lucky one
+    const chooseLuckyOne = car => {
+        const randNum = randomNumber(car.length);
+        // console.log(randNum);
+        const luckyCar = carInfo.find(luckyOne => luckyOne.id === car[randNum].id);
+        setCarInfo([luckyCar]);
+    }
+
     // console.log(carInfo);
     // console.log(delItem);
     
@@ -73,6 +101,8 @@ const Cars = () => {
                         deleteItem={deleteItem}
                     ></Sidebar>
                 </div>
+                <button className='sidebar-btn first-child' onClick={() => chooseLuckyOne(carInfo)}>Choose lucky one <FontAwesomeIcon icon={faTableTennis} /></button>
+                <button className='sidebar-btn' onClick={()=> clearStack(carInfo)}>Clear the stack <FontAwesomeIcon icon={faGauge} /></button>
             </div>
         </div>
     );
