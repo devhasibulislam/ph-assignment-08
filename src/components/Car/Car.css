@@ -42,6 +42,10 @@
     background-color: #8e44ad;
 }
 
-hr{
+hr {
     margin: 1rem 0;
+}
+
+.cart-icon{
+    margin-left: .5rem;
 }

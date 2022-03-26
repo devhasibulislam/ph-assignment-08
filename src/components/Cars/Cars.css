@@ -28,7 +28,7 @@
     position: fixed;
     right: .5rem;
     width: 18%;
-    top: 10rem;
+    top: 7rem;
 }
 
 img {
@@ -80,6 +80,9 @@ img {
     background-color: #ffb142;
 }
 
+.btn-icon{
+    margin-left: .5rem;
+}
 
 /* iPhone SE */
 @media only screen and (max-width: 375px) {

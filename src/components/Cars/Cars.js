@@ -79,8 +79,8 @@ const Cars = () => {
                         deleteItem={deleteItem}
                     ></Sidebar>
                 </div>
-                <button className='sidebar-btn first-child' onClick={() => chooseLuckyOne(carInfo)}>Choose lucky one <FontAwesomeIcon icon={faTableTennis} /></button>
-                <button className='sidebar-btn' onClick={()=> clearStack(carInfo)}>Clear the stack <FontAwesomeIcon icon={faGauge} /></button>
+                <button className='sidebar-btn first-child' onClick={() => chooseLuckyOne(carInfo)}>Choose lucky one<span className='btn-icon'><FontAwesomeIcon icon={faTableTennis} /></span></button>
+                <button className='sidebar-btn' onClick={() => clearStack(carInfo)}>Clear the stack<span className='btn-icon'><FontAwesomeIcon icon={faGauge} /></span></button>
             </div>
         </div>
     );

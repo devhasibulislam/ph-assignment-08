@@ -19,7 +19,7 @@ const Car = ({ car, handleAddingIntoCart }) => {
                 </div>
             </div>
             <hr />
-            <button className='add-cart' onClick={() => handleAddingIntoCart(car)}>Add to cart <FontAwesomeIcon icon={faCartPlus} /></button>
+            <button className='add-cart' onClick={() => handleAddingIntoCart(car)}>Add to cart<span className='cart-icon'><FontAwesomeIcon icon={faCartPlus} /></span></button>
         </div>
     );
 };
