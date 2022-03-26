@@ -1,14 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Sidebar.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrash } from '@fortawesome/free-solid-svg-icons';
 
 const Sidebar = ({ carInfo, deleteItem }) => {
-    // const { name, img_url } = carInfo;
-    // carInfo.map(car => console.log(car.name))
-    // console.log(name);
-    // console.log(carInfo.length);
-    // console.log(carInfo);
     return (
         <div>
             {

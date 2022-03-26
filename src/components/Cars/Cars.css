@@ -21,6 +21,14 @@
     justify-content: center;
     color: white;
     padding: 1rem;
+
+    /* to make fixed as sidebar */
+    height: fit-content;
+    border-radius: 1rem;
+    position: fixed;
+    right: .5rem;
+    width: 18%;
+    top: 10rem;
 }
 
 img {
@@ -91,6 +99,16 @@ img {
     .side-bar {
         order: 1;
     }
+
+    .side-bar {
+        height: -moz-fit-content;
+        height: auto;
+        border-radius: 1rem;
+        position: relative;
+        right: 0;
+        width: auto;
+        top: 0;
+    }
 }
 
 /* Pixel 5 or Samsung Galaxy S8 Plus or iPhone 12 Pro */
@@ -110,6 +128,16 @@ img {
 
     .side-bar {
         order: 1;
+    }
+
+    .side-bar {
+        height: -moz-fit-content;
+        height: auto;
+        border-radius: 1rem;
+        position: relative;
+        right: 0;
+        width: auto;
+        top: 0;
     }
 }
 
@@ -131,6 +159,16 @@ img {
     .side-bar {
         order: 1;
     }
+
+    .side-bar {
+        height: -moz-fit-content;
+        height: auto;
+        border-radius: 1rem;
+        position: relative;
+        right: 0;
+        width: auto;
+        top: 0;
+    }
 }
 
 /* iPad Mini or iPad Air */
@@ -150,5 +188,15 @@ img {
 
     .side-bar {
         order: 1;
+    }
+
+    .side-bar {
+        height: -moz-fit-content;
+        height: auto;
+        border-radius: 1rem;
+        position: relative;
+        right: 0;
+        width: auto;
+        top: 0;
     }
 }

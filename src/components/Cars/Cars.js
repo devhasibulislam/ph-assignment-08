@@ -4,7 +4,6 @@ import Sidebar from '../Sidebar/Sidebar';
 import './Cars.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTableTennis, faGauge } from '@fortawesome/free-solid-svg-icons';
-import { type } from '@testing-library/user-event/dist/type';
 
 const Cars = () => {
     const [cars, setCars] = useState([]);
@@ -19,8 +18,6 @@ const Cars = () => {
 
     // function for handle button event
     const handleAddingIntoCart = car => {
-        // console.log(car);
-        // console.log(carInfo);
         const matchId = carInfo.find(carId => carId.id === car.id);
         if (!matchId) {
             if (!(carInfo.length > 3)) {
@@ -31,29 +28,22 @@ const Cars = () => {
         } else {
             alert('Already added this item!');
         }
-        // console.log(matchId);
     };
 
     // handle delete item
     const deleteItem = car => {
-        // console.log(item);
-        // carInfo.splice(item, 1);
-        // console.log('deletion successful!');
-        // console.log(car);
         const deletedCar = carInfo.filter(delCar => delCar.id !== car.id);
         setCarInfo(deletedCar);
     }
 
     // clear stack
     const clearStack = car => {
-        console.log(car);
         setCarInfo([]);
     }
 
     // generate random number
     const randomNumber = number => {
         const num = Math.round(Math.random() * (number - 1));
-        // console.log(typeof num);
         if (num === undefined) {
             randomNumber(number);
         } else {
@@ -63,17 +53,13 @@ const Cars = () => {
 
     // choose lucky one
     const chooseLuckyOne = car => {
-        const randNum = randomNumber(car.length);
-        // console.log(randNum);
-        const luckyCar = carInfo.find(luckyOne => luckyOne.id === car[randNum].id);
-        setCarInfo([luckyCar]);
+        if (car.length !== 0) {
+            const randNum = randomNumber(car.length);
+            const luckyCar = carInfo.find(luckyOne => luckyOne.id === car[randNum].id);
+            setCarInfo([luckyCar]);
+        }
     }
 
-    // console.log(carInfo);
-    // console.log(delItem);
-    
-    // console.log(carInfo);
-    // return segment from HTML to react conversion
     return (
         <div className='box-container'>
             <div className='grid-container'>
@@ -88,14 +74,6 @@ const Cars = () => {
             <div className="side-bar">
                 <h2>Total items: 0{carInfo.length}</h2>
                 <div className='select-scheme'>
-                    {/* {carInfo.map(car => <img src={car.img_url} alt="" />)} */}
-                    {/* {carInfo.map(car => <p><li>{car.name}</li></p>)} */}
-                    {/* {
-                        carInfo.map(car => <Sidebar
-                            key={car.id}
-                            car={car}
-                        ></Sidebar>)
-                    } */}
                     <Sidebar
                         carInfo={carInfo}
                         deleteItem={deleteItem}
